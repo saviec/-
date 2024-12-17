@@ -1,4 +1,6 @@
 import re
+
+
 def read_f(filename):
     try:
         with open(filename, 'r', encoding='utf-8') as file:
@@ -11,6 +13,7 @@ def read_f(filename):
 def write_f(sentences, filename):
     with open(filename, 'w', encoding='utf-8') as file:
         file.write('\n'.join(sentences))
+
 
 def filter_sentences(text, min_word_count):
     sentences = re.split(r'(?<=[.!?]) +', text)
